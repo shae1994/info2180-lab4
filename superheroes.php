@@ -65,10 +65,44 @@ $superheroes = [
   ], 
 ];
 
+$searchFromHTML=$_REQUEST['query'];
+if(strlen($searchFromHTML)==0 or ($searchFromHTML)==""){
+    echo "<ul>";
+    foreach ($superheroes as $superhero){
+    echo "<li>".$superhero['alias']."</li>";
+    }
+    echo "</ul>";
+}else{
+    $result = array();
+    foreach ($superheroes as $superhero){
+        if ($superhero['name']==$searchFromHTML or $superhero['alias']==$searchFromHTML){
+            array_push($result,$superhero['name'],$superhero['alias'],$superhero['biography']);
+        }
+    }
+
+    if (count($result) != 0){
+        $x = 0;
+        foreach ($result as $res){
+            while($x <= 2) {
+                if ($x == 0){
+                    echo "<h3>".strtoupper($result[0])."</h3>";
+                    $x++;
+                }elseif ($x == 1){
+                    echo "<h4> "." A.K.A ".strtoupper($result[1])."</h4>";
+                    $x++;
+                }else{
+                    echo "<P>".$result[2]."</P>";
+                    $x++;
+                }
+                
+            }
+            
+        }
+    }else{
+        echo "<P>"."SUPERHERO NOT FOUND"."</P>";
+    }
+
+}
 ?>
 
-<ul>
-<?php foreach ($superheroes as $superhero): ?>
-  <li><?= $superhero['alias']; ?></li>
-<?php endforeach; ?>
-</ul>
+

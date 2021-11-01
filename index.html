@@ -11,13 +11,35 @@
 </head>
 <body>
     <header>
-    <h1>INFO2180 Lab 4</h1>
-</header>
-<main>
-    <h2>Avengers Character Search</h2>  
-    <button type="button">SEARCH</button>
-    <div class="message"></div>
+    <h1>Avengers Character Search</h1>
+    </header>
+<main>  
+    
+    
+    <p>Search by full name or by alias.</p>
+    <form class="search" method="GET" action="http://localhost/info2180-lab4/superheroes.php">
+        <input id="input" class="search" type="text" placeholder="Eg. Steve Rodjers or Captain America" name="alias" size="40" maxlength="256">
+        <button type="submit">  <i class="search"> Search</i></button>
+    </form>
+    <br>
+    <br>
+    <h2> RESULT</h2>
+    <div class="sp">
+        <br>
+        <div id="result"></div>
+        <br>
+    </div>
+    
+    <br>
+    <br>
 </main> 
+    <audio id="playme" controls autoplay >
+    <source src="Theme.mp3" type="audio/ogg">
+    <source src="Theme.ogg" type="audio/mpeg">
+  </audio>
+  <br>
+
+  <a href="https://www.youtube.com/watch?v=6SfSAq2x-4g">Credit</a>.</p>
 <footer>
     <p>Copyright &copy; 2021 Juddy-Shae Wallace.</p>
 </footer>
