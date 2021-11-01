@@ -31,6 +31,12 @@ body{
     padding-left: 15px;
     align-self: center;
   }
+
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block
+}
   
   form.search button {
     float: left;

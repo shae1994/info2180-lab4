@@ -91,7 +91,7 @@ if(strlen($searchFromHTML)==0 or ($searchFromHTML)==""){
                     echo "<h4> "." A.K.A ".strtoupper($result[1])."</h4>";
                     $x++;
                 }else{
-                    echo "<P>".$result[2]."</P>";
+                    echo "<p>".$result[2]."</p>";
                     $x++;
                 }
                 
@@ -99,7 +99,7 @@ if(strlen($searchFromHTML)==0 or ($searchFromHTML)==""){
             
         }
     }else{
-        echo "<P>"."SUPERHERO NOT FOUND"."</P>";
+        echo "<font color=red >"."<P>"."SUPERHERO NOT FOUND"."</P>";
     }
 
 }
